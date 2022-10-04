@@ -1,0 +1,137 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.inputs input {
+  max-width: 20ch;
+  margin: 0.3rem;
+  text-align: center;
+}
+
+.card-2fa {
+  border-radius: 2%;
+  padding: 3rem;
+  margin: 1rem 0;
+}
+
+.stack {
+  margin-top: 0.6rem;
+}
+
+.card-2fa__form div {
+  display: flex;
+  align-items: center;
+}
+
+.card-2fa__form div * {
+  flex: 1;
+}
+
+.card-2fa__form div label {
+  text-align: left;
+}
+
+.card-2fa__form input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.3rem 0;
+}
+
+.twofa-btn {
+  padding: 0.3rem 2rem;
+  font-size: 1rem;
+  line-height: 0;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.twofa-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.twofa-options * {
+  flex: 1;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.header__nav a:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.page-container {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+}
