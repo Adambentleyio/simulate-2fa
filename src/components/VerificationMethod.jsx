@@ -15,8 +15,8 @@ function VerificationMethod() {
             <button onClick={handleAuthentication} className="twofa-btn">
               <Link to="/authentication"><p>Mobile +44*******932</p></Link>
             </button>
-            <button onClick={handleAuthentication} className="twofa-btn"><p>Landline +44*******627</p></button>
-            <button onClick={handleAuthentication} className="twofa-btn"><p>Email *******@gmail.com</p></button>
+            <button disabled onClick={handleAuthentication} className="twofa-btn"><p>Landline +44*******627</p></button>
+            <button disabled onClick={handleAuthentication} className="twofa-btn"><p>Email *******@gmail.com</p></button>
         </div>
     </div>
   )

@@ -33,6 +33,10 @@ html {
   width: 100%;
 }
 
+#root {
+  width: 100%;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -55,6 +59,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:disabled {
+  outline: none;
+  border: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -104,12 +113,8 @@ button:focus-visible {
   padding: 0.3rem 0;
 }
 
-.twofa-btn {
-  padding: 0.3rem 2rem;
-  font-size: 1rem;
-  line-height: 0;
-  margin-bottom: 0.6rem;
-  display: block;
+.card-2fa small span {
+  color: #747bff;
 }
 
 .twofa-options {
@@ -117,15 +122,39 @@ button:focus-visible {
   flex-direction: column;
 }
 
+.twofa-options button {
+  margin-bottom: 0.3rem;
+}
+
+.twofa-options button:disabled {
+  cursor: default;
+}
+
 .twofa-options * {
   flex: 1;
 }
 
+.form__2fa-code {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 32ch;
+}
+
+.form__2fa-code input[type="text"] {
+  min-height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
 .header__nav {
   display: flex;
-  min-width: 320px;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 900px;
+  padding: 0.6rem 0;
+  border-bottom: 3px solid #1a1a1a;
 }
 
 .header__nav a:not(:first-child) {
@@ -137,8 +166,4 @@ button:focus-visible {
   place-items: center;
   min-width: 100%;
   min-height: 80vh;
-}
-
-.card-2fa small span {
-  color: #747bff;
 }
