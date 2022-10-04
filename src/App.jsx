@@ -1,17 +1,12 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import AuthenticationNumber from './components/AuthenticationNumber'
 import './App.css'
 import VerificationMethod from './components/VerificationMethod'
-import Welcome from './components/Welcome'
-import Nav from './components/Nav'
 
 function App() {
   const [verifyFirstName, setVerifyFirstName] = useState('')
   const [verifyPostcode, setVerifyPostcode] = useState('')
   const [verifyDateOfBirth, setVerifyDateOfBirth] = useState(0)
   const [verifyCheck, setVerifyCheck] = useState(false)
-  const [authNumber, setAuthNumber] = useState([])
 
   useEffect(() => {
 
@@ -35,13 +30,20 @@ function App() {
     // prevent default form submission behaviour
     event.preventDefault()
 
+    // postcode: remove whitespaces and return lower case string
+    const postcodeSanitised = verifyPostcode.replace(/\s+/g, '')
+    const postcodeLowerCase = postcodeSanitised.toLowerCase();
+
+    // first name: return lower case string
+    const firstNameLowerCase = verifyFirstName.toLowerCase()
+
     // destructure object values for validation
     const {firstName, postcode, dateOfBirth} = personVerificationData
 
     //TODO format and compare dateOfBirth to check against input
 
     // check verification against inputs and conditionally render component
-   if (verifyFirstName === firstName && verifyPostcode === postcode)
+   if (firstNameLowerCase === firstName && postcodeLowerCase === postcode)
    { setVerifyCheck(true)
   } else setVerifyCheck(false)
     console.log("Submitted form")
